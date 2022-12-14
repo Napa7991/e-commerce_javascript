@@ -1,0 +1,122 @@
+/* cdn link for our google font spartan */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan',sans-serif;
+}
+
+
+h1{
+    background-color: red;
+    font-size: 50px;
+    line-height: 54px;
+    color: #222;
+}
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    columns: #222;
+}
+h4{
+    font-size: 20px;
+    color: #222;
+}
+h6{
+    font-weight:700;
+    font-size:12px;
+}
+p{
+    font-size:16px;
+    color:#465b52;
+    margin:15px 0 20px 0;
+}
+.section-p1{
+    padding:40px 80px;
+}
+.section-m1{
+    margin:40px 0;
+}
+body{
+    width:100%;
+}
+
+/* Started from here */
+.logo{
+    width: 80px;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: #E3E6F3;
+    box-shadow: 0 5px 15px rgba((0,0,0,0.06), green, blue, alpha); 
+    /* box-shadow: x y radius rgba(red,gree,blue,alpha*/
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+/* targeting navbar li */
+#navbar li{
+    list-style: none;
+    padding:0 20px;
+    /* this position is for navbar li a.active::after. position absolute */
+    position: relative;
+}
+
+/* targeting navbar li anchor tag */
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    /* changing happening so fast after hover so lets add transition */
+    transition: 0.3s ease;
+    
+}
+
+/* 1 */
+/* hover Effect on our navbar links */
+/* #navbar li a:hover{
+    color:#088178; 
+} */
+
+/* 2 */
+/* now to make home have hover effect by default */
+#navbar li a:hover,
+#navbar li a.active{
+    color:#088178;
+}
+
+/* now to make underline effect on navbar links */
+/* we do this by pesudo class i.e after and before */
+/* #navbar li a.active::after{
+    content:"";
+    width:50%;
+    height:2px;
+    background: #088178;
+    position: absolute;
+    bottom: -4px;
+    left:20px;
+} */
+
+/* to make underline whenever we hover */
+
+#navbar li a:hover::after{
+    content: "";
+    width: 50%;
+    height: 2px;
+    background-color: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+    transition:0.3s ease;
+}
