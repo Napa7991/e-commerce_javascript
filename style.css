@@ -10,7 +10,6 @@
 
 
 h1{
-    background-color: red;
     font-size: 50px;
     line-height: 54px;
     color: #222;
@@ -55,8 +54,19 @@ body{
     justify-content: space-between;
     padding: 20px 80px;
     background-color: #E3E6F3;
-    box-shadow: 0 5px 15px rgba((0,0,0,0.06), green, blue, alpha); 
+    /* this is for difference in navbar and hero section with shadow */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06); 
     /* box-shadow: x y radius rgba(red,gree,blue,alpha*/
+
+    /* for shadow to work in navbar */
+    z-index: 999;
+
+    /* to make our navbar sticky */
+    position:sticky;
+    top:0;
+    left:0;
+
+
 }
 #navbar{
     display: flex;
@@ -119,4 +129,42 @@ body{
     bottom: -4px;
     left: 20px;
     transition:0.3s ease;
+}
+
+                    /* HOME PAGE OR HERO */
+#hero{
+    background-image: url("img/hero4.png");
+    height:90vh;
+    width:100%;
+    /* playing with backgound image size */
+    background-size: cover;
+    background-position: top 25% right 0;
+
+    /* now i want my text to be in center  */
+    padding:0 80px ;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* to add color in our text */
+#hero h4{
+    padding-bottom: 15px;
+
+}
+#hero h1{
+    color: #088178;
+}
+#hero button{
+    background-image: url("img/button.png");
+    background-color: transparent;
+    color: #088178;
+    border: 0;
+    /* creating that poweder image in button */
+    padding: 14px 80px 20px 65px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
 }
